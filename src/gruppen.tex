@@ -1,0 +1,75 @@
+Eine algebraische Struktur ($G$, $\circ$) heißt genau dann Gruppe, wenn folgende Axiome erfüllt sind:
+\begin{enumerate}
+    \item \textbf{Abgeschlossenheit:} Gruppe $G$ ist bezüglich $\circ$ abgeschlossen: $\forall a,b\in G : \exists c: G: a\circ b=c$
+    \item \textbf{Assoziativgesetz:} Operation $\circ$ ist Assoziativ: $\forall a,b,c\in G: (a\circ b)\circ c=a\circ (b\circ c)$
+    \item \textbf{Linksneutrales Element:} In $G$ gibt es ein linksneutrales Element: $\exists e\in G: \forall a\in G: a\circ e = a$
+    \item \textbf{Inverses Element:} In $G$ gibt es zu jedem Element ein Inverses Element: $\forall a\in G:\exists a'\in G: a\circ a'=a'\circ a=e$
+\end{enumerate}
+Die Gruppe heißt zusätzlich Abel'sche Gruppe, wenn:
+\begin{enumerate}
+    \setcounter{enumi}{4}
+    \item \textbf{Kommutativgesetz:} Operation $\circ$ ist Kommutativ: $\forall a,b\in M: a\circ b=b\circ a$
+\end{enumerate}
+\subsection{Elementare Gruppeneigenschaften}\label{subsec:elementare-gruppeneigenschaften}
+\begin{enumerate}
+    \item Sei $e\in G$ linksneutrales Element und $a,a'\in G$, sodass $a'\circ a=e$.
+    Dann gilt auch $a\circ a'=e$.
+    Man nennt $a'$ dann nur noch ein inverses zu $a$.
+    \item Sei $e\in G$ linksneutrales Element.
+    Dann gilt $a\circ e=a$ für alle $a\in G$ und man nennt $e$ dann ein neutrales Element.
+    \item Es gibt genau ein neutrales Element $e\in G$.
+    \item Zu jedem $a\in G$ gibt es genau ein inverses Element $a'\in G$ (oft mit $a^-1$ bezeichnet).
+    \item $(a^{-1})^{-1}=a$.
+    \item $(a\circ b)^{-1}=b^{-1}\circ a^{-1}$.
+\end{enumerate}
+
+\subsection{Gruppeneigenschaften nachweisen}\label{subsec:gruppeneigenschaften-nachweisen}
+\begin{enumerate}
+    \item Wählen wir $a''$ mit $a''\circ a'=e$.
+    Dann gilt: $a\circ a'=e\circ a\circ a'=a''\circ a'\circ a\circ a'=a''\circ e\circ a'=a''\circ a'=e$
+    \item $a\circ e=a\circ(a'\circ a)=(a\circ a')\circ a=e\circ a=a$
+    \item Wir nehmen an, es gäbe zwei neutrale Elemente von $G$ ($e,e^*\in G$).
+    Dann ist jedoch $e^*=e\circ e^*=e$.
+    Die beiden neutralen Elemente sind also zwangsläufig gleich.
+    \item Wir nehmen an, es gäbe ein zweites inverses Element $a^*$ neben $a'$ zu $a$ in $G$.
+    Dann muss jedoch $a^*=a'$ sein: $a^*=a^*\circ e=a^*\circ (a\circ a')=(a^*\circ a)\circ a'=e\circ a'=a'$
+    \item Es gilt $(a^{-1})^{-1}\circ a^{-1}=e$.
+    Es gilt aber auch  $a\circ a^{-1}=e$.
+    Zu $a^{-1}$ gibt es jedoch nur ein inverses Element (nach der vierten Eigenschaft der Gruppen).
+    Also ist $(a^{-1})^{-1}=a$.
+    \item Es gilt $(b^{-1}\circ a^{-1})\circ(a\circ b)=b^{-1}\circ(a^{-1}\circ a)\circ b=b^{-1}\circ e\circ b=b^{-1}\circ b=e$.
+    Somit ist $(b^{-1}\circ a^{-1})$ ds inverse Element zu $a\circ b$.
+    Also ist $(a\circ b)^{-1}=b^{-1}\circ a^{-1}$.
+\end{enumerate}
+\subsection{Ordnung}\label{subsec:ordnung}
+Die Ordnung $m$ eines Elementes $g\in M$ mit $e$ als neutralem Element ist:\\
+\begin{align*}
+    g^m=g\circ g \dots \circ g=e
+\end{align*}
+Beispielrechnung:\\
+Gruppe $M=(\mathbb{Z}_{17}, \oplus)$, $g=4$ und dem neutralen Element $e=0$.
+\begin{align*}
+    [4]_{17}^m&=[0]_{17}\\
+    4^m&\equiv_{17}0\\
+    \\
+    4^1&\equiv_{17}4\\
+    4^2&\equiv_{17}8\\
+    4^3&\equiv_{17}12\\
+    4^4&\equiv_{17}16\\
+    4^4&\equiv_{17}20\equiv_{17}3\\
+    4^5&\equiv_{17}7\\
+    4^6&\equiv_{17}11\\
+    4^7&\equiv_{17}15\\
+    4^8&\equiv_{17}19\equiv_{17}2\\
+    4^9&\equiv_{17}6\\
+    4^{10}&\equiv_{17}10\\
+    4^{11}&\equiv_{17}14\\
+    4^{12}&\equiv_{17}18\equiv_{17}1\\
+    4^{13}&\equiv_{17}5\\
+    4^{14}&\equiv_{17}9\\
+    4^{15}&\equiv_{17}13\\
+    4^{16}&\equiv_{17}17\equiv_{17}0\equiv_{17}4^m\\
+    \\
+    Ord(4)&=16\\
+\end{align*}
+Daher hat die 4 in der Gruppe $(\mathbb{Z}_{17}, \oplus)$ die Ordnung $16$.

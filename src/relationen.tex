@@ -1,0 +1,49 @@
+Eine Relation kann mit einem zweistelligen Prädikat beschrieben werden.\\
+Eine Relation $R$ zwischen zwei Mengen $M$ und $N$ ist eine beliebige Teilmenge des kartesischen Produkts $M\times N$.
+\begin{align*}
+    R\subseteq X\times N
+\end{align*}
+
+\subsection{Anzahl der Möglichen Relationen}\label{subsec:anzahl-der-moglichen-relationen}
+Seien $M$ und $N$ Mengen, so gibt es $2^{(|M| + |N|)^2}$ Elemente.
+
+\subsection{Inverse}\label{subsec:inverse}
+Eine Inverse Relation $R^{-1}$ zu $R$ ist definiert als:
+\begin{align*}
+    R^{-1}&=\left\{(y, x)|(x, y)\in R\right\}
+\end{align*}
+Dabei sind folgende Rechenregeln zu beachten:
+\begin{align*}
+    (R_1\circ R_2)^{-1}&=R_2^{-1}\circ R_1^{-1}\\
+    (R_1^{-1})^{-1}&=R_1
+\end{align*}
+\subsubsection{Mit dem Beweis}
+\textbf{Zu zeigen:} $(R_1\circ R_2)^{-1}\subseteq R_2^{-1}\circ R_1^{-1}$:\\
+Sei $(z,x)\in(R_1\circ R_2)^{-1}$ beliebig.
+Nach Definition der inversen Relation gilt: $(x, z)\in R_1\circ R_2$.
+Dann gibt es ein $y\in M_2$ für das gilt: $(x, y)\in R_1$ und $(y, z)\in R_2$.
+Also gilt: $(y, x)\in R_1^{-1}$ und $(z, y)\in R_2^{-1}$.
+Nach der Definition von $\circ$ bedeutet das: $(z, x)\in R_2^{-1}\circ R_1^{-1}$\\
+\\
+\textbf{Noch zu zeigen:} $R_2^{-1}\circ R_1^{-1}\subseteq (R_1\circ R_2)^{-1}$\\
+Sei $(z, x)\in R_2^{-1}\circ R_1^{-1}$ beliebig.
+Es gibt ein $y\in M_2$ für das gilt: $(y,x)\in R_1^{-1}$ und $(z, y)\in R_2^{-1}$.
+Nach der Definition der inversen Relation gilt: $(x, y)\in R_1$ und $(y, z)\in R_2$.
+Also folgt $(x, z)\in R_1\circ R_2$.
+Mit der Definition der inversen Relation folgt: $(z, x)\in (R_1 \circ R_2)^{-1}$
+
+\subsection{Verkettung von Relationen}\label{subsec:verkettung-von-relationen}
+Seien $M_1$, $M_2$ und $M_3$ beliebige Mengen.
+Es seien $R_1\subseteq M_1 \times M_2$ und $R_2\subseteq M_2 \times M_3$ binäre Relationen.
+Die Verkettung oder auch Komposition $R_1\circ R_2$ ist dann folgend zwischen $M_1$ und $M_3$:\\
+\begin{align*}
+    R_1\circ R_2\subseteq M_1\times M_3\\
+    R_1\circ R_2=\left\{(x,z)|x\in M_1 \wedge z\in M_3 \wedge \exists y\in M_2: (x, y)\in R_1 \wedge (y, z)\in R_2 \}
+\end{align*}
+
+\subsection{Assoziative Verkettung}\label{subsec:assoziative-verkettung}
+Es seien $R_1\subseteq M_1\times M_2$, $R_2\subseteq M_2\times M_3$, $R_3\subseteq M_3\times M_4$ Relationen, dann gilt:
+\begin{align*}
+(R_1\circ R_2)
+    \circ R_3&=R_1\circ (R_2\circ R_3)
+\end{align*}

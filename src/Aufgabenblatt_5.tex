@@ -1,0 +1,42 @@
+%! Author = engel
+%! Date = 02.06.2024
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% Document
+\begin{document}
+    \section[5.3]{Aufgabe 5.3}\label{sec:aufgabe-5.3}
+    Bestimmen Sie für $m=7$ und $m=10$ und die Zahlen $145, 200$ und $711$ jeweils die zugehörige Restklasse $[r]_{m}$ mit $0\leqr<m$\\
+    \begin{align*}
+    [145]
+        _7&=[5]_7\\
+        [145]_{10}&=[5]_{10}\\
+        \\
+        [200]_7&=[4]_{7}\\
+        [200]_{10}&=[0]_{10}\\
+        \\
+        [711]_7&=[4]_{7}\\
+        [711]_{10}&=[1]_{10}\\
+    \end{align*}
+    \section[5.3]{Aufgabe 5.3}\label{sec:aufgabe-5.32}
+    Es seinen $m,n\in \mathbb{N}$.
+    Zeigen Sie, dass die folgenden Aussagen äquivalent sind:\\
+    \\
+    $(1)$ $\forall a\in\mathbb{Z}:[a]_m\subseteq[a]_n$.\\
+    $(2)$ $\exists a\in\mathbb{Z}:[a]_m\subseteq[a]_n$.\\
+    $(3)$ $n|m$\\
+    \\
+    $(1)\Rightarrow(2)$: Es gelte $(1)$.
+    Da $\mathbb{Z}\neq\emptyset$ ist, folgt dann auch $(2)$.\\
+    \\
+    $(2)\Rightarrow(3)$: Es gelte $(2)$.
+    Wähle also $a\in\mathbb{Z}$ mit $[a]_m\subseteq[a]_n$.\\
+    Daraus gilt: $[a]_m=a+m\mathbb{Z}$ und $[a]_n=a+n\mathbb{Z}$.\\
+    Daher gilt auch: $a+m=a+m\cdot1\in[a]_m$ also auch $a+m=a+n\cdot k$.\\
+    Es folgt $m=n\cdot k$, also $n|m$.
+\end{document}

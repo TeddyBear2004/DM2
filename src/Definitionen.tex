@@ -1,0 +1,61 @@
+%! Author = engel
+%! Date = 04.06.2024
+
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Document
+\begin{document}
+
+    \section{Beschränkungen}\label{sec:beschrankungen}
+
+    \subsection{Obere Schranke}\label{subsec:obere-schranke}
+    \begin{align*}
+        \exists S:\forall x\in M: x\leq S
+    \end{align*}
+
+    \subsection{Untere Schranke}\label{subsec:untere-schranke}
+    \begin{align*}
+        \exists S:\forall x\in M: x\geq S
+    \end{align*}
+
+    \subsection{Maximum}\label{subsec:maximum}
+    Das Maximum $a$ ist genau dann ein Maximum der Menge $M$, wenn gilt:
+    \begin{align*}
+        a\in M: \forall x\in M: x\leq a
+    \end{align*}
+    Das heißt aber im Umkehrschluss, dass es nicht zwingend ein Maximum geben muss.
+    So zum Beispiel $M=[-1,1)$, da die $1$ nicht in der Menge enthalten ist, und es keine Näherung zu $1$ gibt.
+
+    \subsection{Minimum}\label{subsec:minimum}
+    Das Minimum $a$ ist genau dann ein Minimum der Menge $M$, wenn gilt:
+    \begin{align*}
+        a\in M: \forall x\in M: x\geq a
+    \end{align*}
+    Das heißt aber im Umkehrschluss, dass es nicht zwingend ein Minimum geben muss.
+    So zum Beispiel $M=(-1,1]$, da die $-1$ nicht in der Menge enthalten ist, und es keine Näherung zu $-1$ gibt.
+
+    \subsection{Supremum}\label{subsec:supremum}
+    Das Supremum ist die kleinste obere Grenze und damit der größte Punkt in der Menge $M$.\\
+    Anders ausgedrückt, die kleinste obere Schranke.
+
+    \subsection{Infimum}\label{subsec:infimum}
+    Das Supremum ist die größte untere Grenze und damit der kleinste Punkt in der Menge $M$.\\
+    Anders ausgedrückt, die größte untere Schranke.
+
+    \subsection{Unterschied}\label{subsec:unterschied}
+    Dabei gilt der Unterschied zwischen dem \textbf{Supremum} und dem \textbf{Maximum}, beziehungsweise dem \textbf{Infimum} und dem \textbf{Minimum}, dass
+    das \textbf{Maxi-} und dem \textbf{Minimum} zwingen in der Menge $M$ enthalten sein müssen, während das \textbf{Supremum} und das \textbf{Infimum} gegebenenfalls auch außerhalb der Menge $M$ liegen können.
+
+    \section{Relationen}\label{sec:relationen}
+    \input{relationen}
+
+    \section{Gruppen}\label{sec:gruppen}
+    \input{gruppen}
+
+\end{document}
