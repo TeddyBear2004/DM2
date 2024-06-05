@@ -1,0 +1,24 @@
+\subsection{Ordnung von endlichen Gruppen}
+Sei $(G, \circ)$ eine endliche Gruppe und $g\in G$.
+\begin{enumerate}
+    \item Dann gibt es ein $n\in \mathbb{N}$ mit $g^n=e$.
+    Die kleinste solche Zahl $n$ wird als Ordnung von $g$ bezeichnet, Notation: $ord(g)\coloneqq n$.
+    \item Es gilt $<g>=\left\{ g^k|k=0,\dots,ord(g)-1 \right\}$
+\end{enumerate}
+\begin{align}
+    ord(g)=ord(<g>)=|<g>|
+\end{align}
+\subsection{Erzeugende Elemente}
+Sei $m\in \mathbb{N}$ und $p\in \mathbb{P}$.
+\begin{enumerate}
+    \item Die Gruppe $(\mathbb{Z}_m, \oplus)$ ist zyklisch.
+    Ein Element $[a]_m$ ist genau dann erzeugendes Element, wenn $ggT(a,m)=1$.
+    \item Die Gruppe $(\mathbb{Z}_m^\times, \otimes)$ ist im allgemeinen nicht zyklisch.
+    \begin{align}
+        \mathbb{Z}_8^\times=\left\{ [1]_8, [3]_8, [5]_8, [7]_8\right\}
+    \end{align}
+    Es gilt $ord([1]_8)=1$ und $ord([a]_8)=2$ für $a=3,5,7$.
+    \item Die Gruppe $(\mathbb{Z}_p^\times, \otimes)=(\mathbb{Z}_p \setminus \left\{ [0]_p\right\}, \otimes)$ ist zyklisch.
+    Das bedeutet, \textbf{es gibt} ein multiplikativ erzeugendes Element von $(\mathbb{Z}_p\setminus \left\{ [0]_p \right\}, \otimes)$.
+    Das Problem ist dann das finden eines solchen Elements.
+\end{enumerate}

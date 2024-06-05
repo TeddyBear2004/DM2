@@ -1,15 +1,23 @@
+Eine algebraische Struktur ist ein Konstrukt mit der Syntax $(M, \circ)$ mit der Menge $M$ und der Operation $\circ$.
+Solche Strukturen haben verschiedene Eigenschaften.
+Dazu zählen:
+\begin{enumerate}
+    \item \textbf{Kommutativgesetz:} $\forall a, b\in M:a\circ b=b\circ a$
+    \item \textbf{Assoziativgesetz:} $\forall a, b, c\in M:(a\circ b)\circ c=a\circ (b\circ c)$
+    \item \textbf{Existenzsatz:} $\forall a, b\in M: \exists x\in M: a\circ x=b$\\
+    bzw. $\forall a, b\in M: \exists x: x\circ a=b$
+    \item \textbf{Eindeutigkeitssatz:} $\forall a, b\in M:\forall x_1, x_2\in M : a\circ x_1 =b \wedge a\circ x_2=b\rightarrow x_1=x_2$\\
+    bzw. $\forall a, b\in M:\forall x_1, x_2\in M : x_1\circ a =b \wedge x_2\circ a=b\rightarrow x_1=x_2$
+\end{enumerate}
+\subsection{Gruppe}
 Eine algebraische Struktur ($G$, $\circ$) heißt genau dann Gruppe, wenn folgende Axiome erfüllt sind:
 \begin{enumerate}
-    \item \textbf{Abgeschlossenheit:} Gruppe $G$ ist bezüglich $\circ$ abgeschlossen: $\forall a,b\in G : \exists c: G: a\circ b=c$
-    \item \textbf{Assoziativgesetz:} Operation $\circ$ ist Assoziativ: $\forall a,b,c\in G: (a\circ b)\circ c=a\circ (b\circ c)$
+    \item \textbf{Existenzsatz}
+    \item \textbf{Assoziativgesetz}
     \item \textbf{Linksneutrales Element:} In $G$ gibt es ein linksneutrales Element: $\exists e\in G: \forall a\in G: a\circ e = a$
     \item \textbf{Inverses Element:} In $G$ gibt es zu jedem Element ein Inverses Element: $\forall a\in G:\exists a'\in G: a\circ a'=a'\circ a=e$
 \end{enumerate}
-Die Gruppe heißt zusätzlich Abel'sche Gruppe, wenn:
-\begin{enumerate}
-    \setcounter{enumi}{4}
-    \item \textbf{Kommutativgesetz:} Operation $\circ$ ist Kommutativ: $\forall a,b\in M: a\circ b=b\circ a$
-\end{enumerate}
+Die Gruppe heißt zusätzlich Abel'sche Gruppe, wenn das \textbf{Kommutativgesetz} erfüllt ist.
 \subsection{Elementare Gruppeneigenschaften}\label{subsec:elementare-gruppeneigenschaften}
 \begin{enumerate}
     \item Sei $e\in G$ linksneutrales Element und $a,a'\in G$, sodass $a'\circ a=e$.
@@ -41,6 +49,21 @@ Die Gruppe heißt zusätzlich Abel'sche Gruppe, wenn:
     Somit ist $(b^{-1}\circ a^{-1})$ ds inverse Element zu $a\circ b$.
     Also ist $(a\circ b)^{-1}=b^{-1}\circ a^{-1}$.
 \end{enumerate}
+\subsection{Satz von Lagrange}
+$(G, \circ)$ Gruppe, $H\subseteq G$ eine Untergruppe.
+$ord(H)|ord(G)$
+$\forall g\in G: ord(g)|ord(G)$
+$g_1\equiv g_2 \leftrightarrow g_2^{-1}g_1\in H$
+\subsection{Satz von Fermat}
+Primzahl $p$, $0<a\leq p-1$
+\begin{align}
+    a^{p-1}\equiv_{p}1\\
+    a^p\equiv_{p}a
+\end{align}
+\begin{align}
+    \mathbb{Z}^*_{p\cdot q}=\left\{[a]_{p\cdot q}|ggT(a,p\cdot q)=1\right\}
+    [a]_{pq}^{|\mathbb{Z}^*_{p\cdot q}|+1}=[a]_{pq}
+\end{align}
 \subsection{Ordnung}\label{subsec:ordnung}
 Die Ordnung $m$ eines Elementes $g\in M$ mit $e$ als neutralem Element ist:\\
 \begin{align*}
