@@ -22,3 +22,87 @@ Sei $m\in \mathbb{N}$ und $p\in \mathbb{P}$.
     Das bedeutet, \textbf{es gibt} ein multiplikativ erzeugendes Element von $(\mathbb{Z}_p\setminus \left\{ [0]_p \right\}, \otimes)$.
     Das Problem ist dann das finden eines solchen Elements.
 \end{enumerate}
+
+\subsection{Satz von Lagrange}
+Sei $(G, \circ)$ eine endliche Gruppe und $H$ eine Untergruppe.
+Dann gilt:
+\begin{align*}
+    ord(H)|ord(G)
+\end{align*}
+Da die Ordnung eines Gruppenelements $g$ gleich der Ordnung der von $g$ erzeugten Untergruppe $<g>$ ist, folgt:
+\begin{align*}
+    \forall g\in G: ord(g)|ord(G)
+\end{align*}
+
+\subsection{Kongruenz ist Äquivalenzrelation}
+Sei $(G, \circ)$ eine Gruppe und $H$ eine Untergruppe.
+\begin{enumerate}
+    \item Dann ist $\equiv_H$ eine Äquivalenzrelation.
+    \item Für die Äquivalenzklassen bezüglich dieser Äquivalenzrelation gilt:
+    \begin{align*}
+        \forall g\in G: [g]_{\equiv_{H}}=\left\{ g\circ h|h\in H\right\} \eqqcolon gH
+    \end{align*}
+\end{enumerate}
+
+\subsection{Satz von Euler}
+Sei $(G, \circ)$ eine endliche Gruppe und $g\in G$.
+Dann gilt:
+\begin{align*}
+    g^{ord(G)}=e
+\end{align*}
+\\
+Sei $m\in \mathbb{N}$.
+Dann definieren wir
+\begin{align*}
+    \varphi(m)\coloneqq |\left\{ a\in \mathbb{N}|a\leq m \wedge ggT(a,m)=1 \right\}|
+\end{align*}
+als Anzahl der zu $m$ teilerfremden natürlichen Zahlen zwischen 1 und $m$.
+$\varphi$ heißt die Eulersche $\varphi$-Funktion.
+Es gilt:
+\begin{align*}
+    \varphi(m)=ord(\mathbb{Z}_m^{\times})
+\end{align*}
+\\
+Seien $m, a\in\mathbb{N}$ mit $ggT(m,a)=1$.
+Dann gilt:
+\begin{align*}
+    a^{\varphi(m)}\equiv_m 1
+\end{align*}
+\\
+Fermat hat mit dem kleinen Satz von Fermat einen Spezialfall bewiesen:\\
+Sei $p\in\mathbb{P}$ und $a\in\mathbb{N}$ mit $1\leq a<p$
+Dann gilt:
+\begin{align*}
+    a^{p-1}\equiv_p 1
+\end{align*}
+Oder anders gesagt:
+\begin{align*}
+    [a]_p^{p-1}= [1]_p
+\end{align*}
+\begin{enumerate}
+    \item Sei $p\in \mathbb{P}$.
+    Dann gilt:
+    \begin{align*}
+        \varphi(p)=p-1
+    \end{align*}
+    \item Seien $p\in \mathbb{P}$ und $k \in \mathbb{N}$.
+    Dann gilt:
+    \begin{align*}
+        \varphi(p^k)=p^k-p^{k-1}=p^k(1-\frac{1}{p})
+    \end{align*}
+    \item Seien $m,n\in \mathbb{N}$ und $ggT(m,n)=1$.
+    Dann gilt:
+    \begin{align*}
+        \varphi(m\cdot n)=\varphi(m)\cdot \varphi(n)
+    \end{align*}
+    \item Seien $p,q\in \mathbb{P}$ mit $p\neq q$.
+    Dann gilt:
+    \begin{align*}
+        \varphi(p\cdot q)=\varphi(p-1)\cdot \varphi(q-1)
+    \end{align*}
+    \item Sei $n=\prod_{j=1}^{r}p_j^{k_{j}}$ mit $r\in \mathbb{N}$, $p_j\in\mathbb{P}$ und $k_j\in \mathbb{N}_0$ für alle $j=1,\dots,r$.
+    Dann gilt:
+    \begin{align*}
+        \varphi(n)=n\cdot \prod_{j=1}^{r}(1-\frac{1}{p_j})
+    \end{align*}
+\end{enumerate}
