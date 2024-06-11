@@ -106,3 +106,47 @@ Oder anders gesagt:
         \varphi(n)=n\cdot \prod_{j=1}^{r}(1-\frac{1}{p_j})
     \end{align*}
 \end{enumerate}
+
+\begin{align*}
+    \varphi(p)&=p-1\\
+    n&=pq\\
+    \varphi(pq)&=pq-1-(q-1)-(p-1)\\
+    &=(p-1)(q-1)\\
+    \\
+    n&=6=2\cdot3\\
+    \varphi(6)&=1\cdot 2=2
+\end{align*}
+Satz von Lagrange:
+\begin{align*}
+    \forall a\in\mathbb{Z}_n^{\times}:a^{\varphi(n)}&\equiv_{n}1\\
+    \forall a\in\mathbb{Z}_p^{\times}:a^{p-1}&\equiv_{p}a\\
+    \forall a\in\mathbb{Z}_p:a^{(p-1)+1}&\equiv_{p}a\\
+    n&=p\cdot q\\
+    \varphi(n)&=(p-1)(q-1)\\
+    \forall a\in\mathbb{Z}_{pq}^{\times}:a^{(p-1)(q-1)}&\equiv_{pq}1^\\
+    \forall a\in\mathbb{Z}_{pq}:a^{(p-1)(q-1)+1}&\equiv_{pq}a\\
+    \\
+    (p-1)(q-1)+1&=e\cdot d\\
+    ed&\equiv_{(p-1)(q-1)}1\\
+    a^{e\cdot d}&\equiv_{pq}(a^e)^d\\
+    &\equiv_{pq}(a^d)^e\\
+\end{align*}
+\begin{align*}
+    p\coloneqq7\\
+    q\coloneqq11\\
+    e=13\\
+    d=(p-1)(q-1)=6\cdot 10=60\\
+    ggt(13,60)=1\\
+    (n,e)=(77,13)\\
+    [13]_{(p-1)(q-1)}\otimes[d]_{(p-1)(q-1)}=[1]_{(p-1)(q-1)}\\
+    [13]_{60}\otimes[d]_{60}=[1]_{60}\\
+    60&=4\cdot13+8=5\cdot(60-4\cdot13)-3\cdot13=5\cdot60-23\cdot13\\
+    13&=1\cdot8+5\leftrightarrow2\cdot8-3)13-1\cdot8=5\cdot8-3\cdot13\\
+    8&=1\cdot5+3\leftrightarrow2\cdot(7-1\cdot5)-1\cdot5=2\cdot8-3\cdot5\\
+    5&=1\cdot3+2\leftrightarrow3-1\dots(5-13)=2\cdot3-1\cdot5\\
+    3&=1\cdot1+1\leftrightarrow1=3-1\cdot2\\
+    2&=2\cdot1+0\\
+    \\
+    d=37\text{ ist das mutliplikative Inverse zur 13, also:}\\
+    [37]_{60}\otimes[13]_{60}=[1]_{60}
+\end{align*}
